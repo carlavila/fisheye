@@ -37,7 +37,7 @@ class Photographer {
 	//PAGE PHOTOGRAPHE (HEADER)
 	buildPhotographerHeader() {
       
-	  const $pageWrapper = document.querySelector(".photograph-header");
+	  const pageWrapper = document.querySelector(".photograph-header");
        
 	  const html = `
 	    <article>
@@ -53,10 +53,22 @@ class Photographer {
 	    </article>
 	  `;
       
-	  $pageWrapper.innerHTML = html
+	  pageWrapper.innerHTML = html
       
 	}
-      
-	//à compléter
+
+	addPhotographerNameOnContactForm(){
+
+		const pageWrapper = document.getElementById('modal-header-photographer-name')
+		pageWrapper.innerHTML = this.name
+		
+	      }
+	    
+	      addPriceOnWidget(){
+	    
+	      const pageWrapper = document.getElementById('widget-price')
+	      pageWrapper.innerHTML = this.price  
+		
+	      } 
       
 }

@@ -14,10 +14,14 @@ const init = async () => {
   // Build photographer header
   const Template = new Photographer(photographerData);
   Template.buildPhotographerHeader()
-  //à compléter
+  Template.addPhotographerNameOnContactForm()
+  Template.addPriceOnWidget()
 
-  // Event Modal Btn
-  //à compléter
+ //à completer formulaire
+ 
+  // Build Sorter and Media
+  const Sorter = new SorterMedia(mediaData);
+  Sorter.render();
 };
 
 init();

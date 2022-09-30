@@ -9,12 +9,15 @@
   </head>
  
     <body>
+
       <div class="bloc-page">
+
         <header class="header-page">
           <a href="index.html">
             <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye - Home page" />
           </a>
         </header>
+
 
         <main id="main" aria-hidden="false">
 
@@ -34,6 +37,7 @@
 
         </main>
         
+
         <div id="contact_modal" role="dialog" aria-label="formulaire de contact" aria-modal="true" aria-hidden="true" tabindex="-1" class="modal">
           <div>
             <header class="modal-header">
@@ -70,7 +74,10 @@
             </form>
           </div>
         </div>
+
+
         <div id="slider" class="slider hidden" aria-hidden="true">
+
           <div role="document" class="slider-container">
             <em class="fa-solid fa-chevron-left slider_btn slider_btn-left" tabindex="0" role="button"></em>
             <div class="slider-media"></div>
@@ -79,7 +86,10 @@
               <em class="fa-solid fa-xmark slider_btn slider_btn-close" tabindex="0" role="button"></em>
             </div>
           </div>
+
         </div>
+
+
       </div>
     
 
@@ -88,17 +98,21 @@
   <script src="scripts/api/api.js"></script>
 
   <!-- Utils -->
-      <!-- formulaire -->  <!-- likes-->  <!-- slider-->  <!-- trier -->
+  <script src="scripts/utils/slider.js"></script> 
+  <script src="scripts/utils/likes.js"></script>
+  <script src="scripts/utils/sorterMedia.js"></script>
+  <script src="scripts/utils/contactForm.js"></script>
 
   <!-- Factories -->
-  <script src="scripts/factories/MediaFactory.js"></script>
+  <script src="scripts/factories/mediaFactory.js"></script>
 
   <!-- models -->
-  <script src="scripts/models/Photographer.js"></script>
-  <script src="scripts/models/Image.js"></script>
-  <script src="scripts/models/Video.js"></script>
+  <script src="scripts/models/photographerModel.js"></script>
+  <script src="scripts/models/imageModel.js"></script>
+  <script src="scripts/models/videoModel.js"></script>
 
   <!-- pages -->
   <script src="scripts/pages/photographer.js"></script>
+
   </body>
 </html>
