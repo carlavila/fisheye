@@ -3,19 +3,19 @@
 class SorterMedia {
 	constructor(Media) {
 	  this.media = Media;
-	  this.$sorterFormWrapper = document.querySelector(".sorter-form-wrapper");
-	  this.$mediaWrapper = document.querySelector(".photograph-media");
-	  this.$sliderWrapper = document.querySelector(".slider-media");
+	  this.sorterFormWrapper = document.querySelector(".sorter-form-wrapper");
+	  this.mediaWrapper = document.querySelector(".photograph-media");
+	  this.sliderWrapper = document.querySelector(".slider-media");
 	}
       
 	async displayMedia() {
 	  
-	  this.$sliderWrapper.innerHTML = "";
+	  this.sliderWrapper.innerHTML = "";
       
 	  this.media.forEach((media) => {
 	    const medium = new MediaFactory(media);
-	    this.$mediaWrapper.appendChild(medium.creatHtml());
-	    this.$sliderWrapper.appendChild(medium.sliderRender());
+	    this.mediaWrapper.appendChild(medium.creatHtml());
+	    this.sliderWrapper.appendChild(medium.sliderRender());
 	  });
 	  countLikes()
 	  heartManager()
@@ -46,26 +46,29 @@ class SorterMedia {
 	}
       
 	onChangeSorter() {
-		this.$sorterFormWrapper.querySelector("select").addEventListener("change", (e) => {
+		this.sorterFormWrapper.querySelector("select").addEventListener("change", (e) => {
 			const orderBy = e.target.value;
 			this.sorterMedia(orderBy);
 		});
 	}
       
 	clearMediaWrapper() {
-	  this.$mediaWrapper.innerHTML = "";
+	  this.mediaWrapper.innerHTML = "";
 	}
       
 	render() {
 	  const sorterForm = `
+
 	    <label for="media-select">Trier par</label>
-	    <select name="media" id="media-select">
-	    <option value="likes">Popularité</option>
-	    <option value="date">Date</option>
-	    <option value="title">Titre</option>
-	    </select>       
+
+		<select name="media" id="media-select">
+			<option value="likes">Popularité</option>
+			<option value="date">Date</option>
+			<option value="title">Titre</option>
+		</select>   
+		
 	  `
-	  this.$sorterFormWrapper.innerHTML = sorterForm;
+	  this.sorterFormWrapper.innerHTML = sorterForm;
 	  this.onChangeSorter()
 	  this.displayMedia()
 	  displaySlider()

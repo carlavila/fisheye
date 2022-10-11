@@ -17,7 +17,57 @@ const init = async () => {
   Template.addPhotographerNameOnContactForm()
   Template.addPriceOnWidget()
 
- //à completer formulaire
+ // Event Modal Btn
+ const modal = document.getElementById('background')
+ const contactBtn = document.getElementById('header-btn');
+ const modalCloseBtn = document.getElementById('modal-btn-close')
+ const submitBtn = document.getElementById("form_contact_btn-submit");
+ 
+ contactBtn.addEventListener("click", (e) => {
+   displayModal();
+ })
+
+ contactBtn.addEventListener("keydown", (e) => {
+   if (e.target === document.activeElement && e.key === "Enter") {
+     displayModal();
+   }
+ })
+
+ modalCloseBtn.addEventListener('click', (e) => {
+   closeModal()
+ })
+
+ modalCloseBtn.addEventListener('keydown',(e) =>{
+   if(e.target === document.activeElement && e.key ==="Enter"){
+     closeModal()
+   }
+ })
+
+ submitBtn.addEventListener('keydown', (e) => {
+   if (e.target === document.activeElement && e.key === "Tab") {
+     e.preventDefault();
+     modalCloseBtn.focus();
+   }
+ })
+
+ document.addEventListener("keydown", (e) => {
+   if (modal.ariaHidden === "false" && e.key === "Escape") {
+     closeModal();
+   }
+ });
+
+ submitBtn.addEventListener("click", (e) => {
+   e.preventDefault()
+   new Message
+   closeModal()
+ })
+
+ submitBtn.addEventListener('keydown', (e) => {
+   if (e.target === document.activeElement && e.key === "Enter") {
+     new Message
+     closeModal()
+   }
+ })
  
   // Build Sorter and Media
   const Sorter = new SorterMedia(mediaData);
