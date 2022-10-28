@@ -32,6 +32,14 @@ h1 {
     margin-top: 100px;
 }
 
+.photographer-link {
+    transition:0.4s;
+}
+
+.photographer-link:hover {
+    transform : scale(1.1);
+}
+
 .photographer_section article {
     justify-self: center;
     display: flex;

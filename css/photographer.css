@@ -115,6 +115,7 @@
     text-align: left;
   }
   
+  
   .sorter-form-wrapper select {
     color: white;
     border: none;
@@ -130,6 +131,8 @@
     margin: 0 0.5rem;
     border-radius: 0.1rem;
     width: 11rem;
+    height: 50px;
+    cursor: pointer;
   }
 
   .sorter-form-wrapper select option {
@@ -140,21 +143,26 @@
     height: 100px;
   }
 
-
   .photograph-media {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
   }
-  
+
   .photograph-medium {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
     margin: 1rem;
+    transition:0.4s;
   }
-  
+
+  .photograph-medium:hover {
+    transform : scale(1.1);
+  }
+
   .medium-container img {
     width: 350px;
     height: 300px;

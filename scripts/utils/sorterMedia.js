@@ -1,5 +1,4 @@
 // trier par
-
 class SorterMedia {
 	constructor(Media) {
 	  this.media = Media;
@@ -60,13 +59,11 @@ class SorterMedia {
 	  const sorterForm = `
 
 	    <label for="media-select">Trier par</label>
-
 		<select name="media" id="media-select">
 			<option value="likes">Popularité</option>
 			<option value="date">Date</option>
 			<option value="title">Titre</option>
 		</select>   
-		
 	  `
 	  this.sorterFormWrapper.innerHTML = sorterForm;
 	  this.onChangeSorter()
