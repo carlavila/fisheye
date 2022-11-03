@@ -58,7 +58,7 @@ class SorterMedia {
 	render() {
 	  const sorterForm = `
 
-	    <label for="media-select">Trier par</label>
+	  <label for="media-select">Trier par</label>
 		<select name="media" id="media-select">
 			<option value="likes">Popularité</option>
 			<option value="date">Date</option>
