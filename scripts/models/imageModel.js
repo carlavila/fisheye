@@ -1,6 +1,6 @@
 class Image {
 	constructor(data) {
-	  this.type = "image";
+	  this.type = "image"; //Le mot clé this commence à faire référence au nouvel objet et il devient l'objet d'instance actuel. Le nouvel objet est ensuite renvoyé comme valeur de retour du constructeur.
 	  this.medium = data.image;
 	  this.id = data.id;
 	  this.photographerId = data.id;

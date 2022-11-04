@@ -1,6 +1,6 @@
-// trier par
+// afficher les médias + trier par
 class SorterMedia {
-	constructor(Media) {
+	constructor(Media) { // new MediaFactory --> photos et videos (fichier mediaFactory.js)
 	  this.media = Media;
 	  this.sorterFormWrapper = document.querySelector(".sorter-form-wrapper");
 	  this.mediaWrapper = document.querySelector(".photograph-media");
@@ -12,7 +12,7 @@ class SorterMedia {
 	  this.sliderWrapper.innerHTML = "";
       
 	  this.media.forEach((media) => {
-	    const medium = new MediaFactory(media);
+	    const medium = new MediaFactory(media); // creaction de l'objet
 	    this.mediaWrapper.appendChild(medium.creatHtml());
 	    this.sliderWrapper.appendChild(medium.sliderRender());
 	  });

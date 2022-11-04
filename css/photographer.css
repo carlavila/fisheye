@@ -89,6 +89,10 @@
     background-color: #D3573C;
     color: black;
   }
+
+  .contact_button:focus {
+    outline: 1px solid #ddd;
+  }
   
   .photograph-header-portrait img {
     margin: 1rem;
