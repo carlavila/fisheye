@@ -91,7 +91,7 @@
   }
 
   .contact_button:focus {
-    outline: 1px solid #ddd;
+    outline: 1px solid rgb(34, 34, 34);
   }
   
   .photograph-header-portrait img {
@@ -120,6 +120,10 @@
   }
   
   .sorter-form-wrapper select {
+    -moz-appearance: none;
+    -ms-appareance: none;
+    appearance: none !important;
+    -webkit-appearance: none !important;
     color: white;
     border: none;
     font-family: "DM Sans", sans-serif;
@@ -129,7 +133,7 @@
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
-    background: #901c1c;
+    background-color: #901c1c;
     padding: 0.5rem;
     margin: 0 0.5rem;
     border-radius: 0.1rem;
@@ -141,6 +145,13 @@
   .sorter-form-wrapper select option {
     background-color: #901c1c;
   }
+
+  .sorter-form-wrapper select.selector {
+    color:#901c1c;
+    background: #901c1c;
+
+  }
+
 
   .media-sorter {
     height: 100px;

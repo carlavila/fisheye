@@ -45,7 +45,8 @@ class SorterMedia {
 	}
       
 	onChangeSorter() {
-		this.sorterFormWrapper.querySelector("select").addEventListener("change", (e) => {
+		this.sorterFormWrapper.querySelector("form").addEventListener("change", (e) => {
+			console.log(e.target)
 			const orderBy = e.target.value;
 			this.sorterMedia(orderBy);
 		});
@@ -57,13 +58,14 @@ class SorterMedia {
       
 	render() {
 	  const sorterForm = `
-
-	  <label for="media-select">Trier par</label>
-		<select name="media" id="media-select">
-			<option value="likes">Popularité</option>
-			<option value="date">Date</option>
-			<option value="title">Titre</option>
-		</select>   
+		<form action="#" id="dropdown">
+	  		<label for="media-select">Trier par</label>
+			<select name="media" id="media-select">
+				<option value="likes">Popularité</option>
+				<option value="date">Date</option>
+				<option value="title">Titre</option>
+			</select>  
+		</form> 
 	  `
 	  this.sorterFormWrapper.innerHTML = sorterForm;
 	  this.onChangeSorter()
